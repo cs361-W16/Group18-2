@@ -88,7 +88,7 @@
     </tr>
 </table>
 
-<button id="dealButton">Deal</button>
+<button id="dealButton">Deal</button> <button id="helpButton" onclick = "helpButton()">Help</button>
 <BR>Remove from: <button id="Remove1">Column1</button><button id="Remove2">Column2</button><button id="Remove3">Column3</button><button id="Remove4">Column4</button>
 
 <BR>Move from column <input type="text" id="from_col"  /> to <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
@@ -141,6 +141,16 @@ $.ajax({
 });
 });
 
+function helpButton() {
+alert("Four cards are dealt to four columns.Click on deal button will deal next four cards.");
+alert("A card can be removed when another card showing at the top of another column has the same suit and a higher value. (Example: a 2 of diamonds can be removed if a 6 of diamonds) ");
+alert("Click on a column to remove the card in the column.");
+alert("A 2 is the lowest value and an ace is higher than a king. Therefore, an ace cannot be removed.");
+alert("When one of the four column is empty, any single card can be moved to that column.");
+alert("Enter which column you want to move from and to which column, then click on move button");
+alert("A game is won if all cards have been removed except for the four aces.");
+alert("Enjoy the game!");
+}
 
 function removeCard(colNumber){
 $.ajax({
