@@ -1,10 +1,16 @@
 <h1>Aces Up</h1>
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
+<!-- Latest compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- JQuery -->
 <script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <body>
-
+<button id="StartGame">New Game</button>
+<div id="NewGameState">
 <table>
     <tr class="title">
         <td>Column0</td>
@@ -88,12 +94,36 @@
     </tr>
 </table>
 
-<button id="dealButton">Deal</button>
+<button id="dealButton">Deal</button> <button id="helpButton" onclick = "helpButton()">Help</button>
 <BR>Remove from: <button id="Remove1">Column1</button><button id="Remove2">Column2</button><button id="Remove3">Column3</button><button id="Remove4">Column4</button>
 
 <BR>Move from column <input type="text" id="from_col"  /> to <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
 
+<BR>
+<!-- Modal Trigger -->
+<button type="button" class="btn" data-toggle="modal" data-target="#myModal">Trigger Error</button>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content alert alert-danger">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Error</h4>
+            </div>
+            <div class="modal-body">
+                <h3>An illegal move was made.</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 <script>
+</div>
 
 var game;
 
@@ -141,6 +171,16 @@ $.ajax({
 });
 });
 
+function helpButton() {
+alert("Four cards are dealt to four columns.Click on deal button will deal next four cards.");
+alert("A card can be removed when another card showing at the top of another column has the same suit and a higher value. (Example: a 2 of diamonds can be removed if a 6 of diamonds) ");
+alert("Click on a column to remove the card in the column.");
+alert("A 2 is the lowest value and an ace is higher than a king. Therefore, an ace cannot be removed.");
+alert("When one of the four column is empty, any single card can be moved to that column.");
+alert("Enter which column you want to move from and to which column, then click on move button");
+alert("A game is won if all cards have been removed except for the four aces.");
+alert("Enjoy the game!");
+}
 
 function removeCard(colNumber){
 $.ajax({
@@ -185,6 +225,13 @@ $.ajax({
   dataType:"json",
 });
 });
+
+$(document).ready(function() {
+    $( "#StartGame" ).click(function() {
+        $( "#NewGameState" ).hide();
+    });
+});
+
 
 
 </script>
