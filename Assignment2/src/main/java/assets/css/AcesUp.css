@@ -8,6 +8,33 @@ height:20px;
 text-align:center;
 }
 
+h1.Heading {
+    top:0;
+    background-color: purple;
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 50px;
+}
+
+body {
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    background-color: purple;
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
 .title{
 font-weight: bold;
 }
