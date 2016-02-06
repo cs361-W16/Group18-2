@@ -46,3 +46,13 @@ width:500px;
 #dialogbox > div > #dialogboxhead{ background: #666; font-size:22px; font-weight:bold; padding:10px; color:#64FE2E; }
 #dialogbox > div > #dialogboxbody{ background:#04B404; padding:20px; color:#FFF; height:450px;font-size:25px }
 #dialogbox > div > #dialogboxfoot{ background: #666; padding:20px; text-align:right; }
+
+#dealButton{
+position:top;
+width:50%;
+height:100px;
+background:#2EFEF7;
+font-weight:bold;
+font-size:50px;
+font-family:fantasy;
+}
