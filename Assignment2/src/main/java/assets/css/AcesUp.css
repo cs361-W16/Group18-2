@@ -8,6 +8,33 @@ height:20px;
 text-align:center;
 }
 
+h1.Heading {
+    top:0;
+    background-color: purple;
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 50px;
+}
+
+body {
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    background-color: purple;
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
 .title{
 font-weight: bold;
 }
@@ -46,3 +73,24 @@ width:500px;
 #dialogbox > div > #dialogboxhead{ background: #666; font-size:22px; font-weight:bold; padding:10px; color:#64FE2E; }
 #dialogbox > div > #dialogboxbody{ background:#04B404; padding:20px; color:#FFF; height:450px;font-size:25px }
 #dialogbox > div > #dialogboxfoot{ background: #666; padding:20px; text-align:right; }
+
+#GameContainer {
+    width: 70%;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+#tableContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#StartGame {
+    background-color: #FF00FF;
+    border: none;
+    font-family: Helvetica;
+    font-size: 20px;
+    color: white;
+    margin-top: 150px;
+    padding:10%;
+}
