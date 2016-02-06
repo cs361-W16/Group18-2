@@ -54,5 +54,9 @@ height:100px;
 background:#2EFEF7;
 font-weight:bold;
 font-size:50px;
-font-family:fantasy;
+font-family:fantasy
+}
+#dealButton:hover{
+background:white;
+border:15px solid red;
 }
