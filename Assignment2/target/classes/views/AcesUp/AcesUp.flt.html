@@ -1,4 +1,4 @@
-<h1>Aces Up</h1>
+<h1 class="Heading">Aces Up</h1>
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
 <!-- Latest compiled and minified Bootstrap CSS -->
@@ -10,9 +10,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
 <body>
-<button id="StartGame">New Game</button>
+<button id="StartGame">START</button>
 <div id="GameContainer">
-<table>
+<table id="tableContainer">
     <tr class="title">
         <td>Column0</td>
         <td >Column1</td>
@@ -103,6 +103,18 @@
     </div>
 </div>
 <button onclick="Alert.render(text)">Help</button>
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" class="glyphicon glyphicon-trash">Left</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="glyphicon glyphicon-trash">Middle</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="glyphicon glyphicon-trash">Right</button>
+        </div>
+    </div>
 <BR>Remove from: <button id="Remove1">Column1</button><button id="Remove2">Column2</button><button id="Remove3">Column3</button><button id="Remove4">Column4</button>
 
 <BR>Move from column <input type="text" id="from_col"  /> to <input type="text" id="to_col"  /> <button id="moveButton">Move</button>
@@ -269,6 +281,9 @@ $(document).ready(function() {
 </script>
 
 
-
+<footer>
+    <p>Assignment 2</p>
+    <p>Group 18: Alex Nguyen, Luay Alwashi, Jiadong Wang, Charles Siebert</p>
+</footer>
 </body>
 </html>

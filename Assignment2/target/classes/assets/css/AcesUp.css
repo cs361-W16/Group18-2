@@ -44,23 +44,33 @@ width: 100px;
 background-color:#F0F0F0;
 }
 
-#GameContainer {
-    width: 70%;
-    margin-left:15%;
-    margin-right:15%;
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #000;
+	border-radius:7px;
+	width:700px;
+	z-index: 10;
+}
+#okButton{
+background:#2EFEF7;
+position:absolute;
+right:90px;
+margin-top:-18px;
+padding:8px;
+width:500px;
 }
 
-#tableContainer {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#StartGame {
-    background-color: #FF00FF;
-    border: none;
-    font-family: Helvetica;
-    font-size: 20px;
-    color: white;
-    margin-top: 150px;
-    padding:10%;
-}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:22px; font-weight:bold; padding:10px; color:#64FE2E; }
+#dialogbox > div > #dialogboxbody{ background:#04B404; padding:20px; color:#FFF; height:450px;font-size:25px }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:20px; text-align:right; }
