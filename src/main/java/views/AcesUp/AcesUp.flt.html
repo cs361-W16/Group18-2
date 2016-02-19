@@ -10,7 +10,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
 <body>
-<button id="StartGame">START</button>
+<button id="StartUGame" onclick="udeck()">US Deck</button>
+<button id="StartSGame"onclick="sdeck()">S deck</button>
 <div id="GameContainer">
 <table align="center" id="tableContainer">
     <tr class="title">
@@ -177,13 +178,18 @@ function display(game) {
     }
 
 }
-
+function udeck(){
 $.getJSON("http://localhost:8080/game", function( data ) {
 display(data);
 game = data;
 });
-
-
+}
+function sdeck(){
+$.getJSON("http://localhost:8080/sgame", function( data ) {
+display(data);
+game = data;
+});
+}
 $("#dealButton").click(function(){
 $.ajax({
     type: "POST",
@@ -280,12 +286,19 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $( "#StartGame" ).click(function() {
+    $( "#StartUGame" ).click(function() {
         $( "#GameContainer" ).show();
-        $( "#StartGame" ).hide();
+        $( "#StartUGame" ).hide();
+        $( "#StartSGame" ).hide();
     });
 });
-
+$(document).ready(function() {
+    $( "#StartSGame" ).click(function() {
+        $( "#GameContainer" ).show();
+        $( "#StartUGame" ).hide();
+        $( "#StartSGame" ).hide();
+    });
+});
 </script>
 
 <footer>
