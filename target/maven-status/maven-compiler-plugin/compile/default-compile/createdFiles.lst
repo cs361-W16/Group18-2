@@ -1,0 +1,6 @@
+conf/Module.class
+conf/Routes.class
+controllers/ApplicationController.class
+models/Game.class
+models/Card.class
+models/Suit.class
