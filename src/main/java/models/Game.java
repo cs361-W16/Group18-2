@@ -23,22 +23,7 @@ public class Game {
     }
 
 
-    public void buildDeck() {
-        for(int i = 2; i < 15; i++){
-            deck.add(new Card(i,Suit.Hearts));
-            deck.add(new Card(i,Suit.Spades));
-            deck.add(new Card(i,Suit.Diamonds));
-            deck.add(new Card(i,Suit.Clubs));
-        }
-    }
-    public void buildSDeck() {
-        for(int i = 2; i < 12; i++){
-            deck.add(new Card(i,Suit.Coins));
-            deck.add(new Card(i,Suit.Cups));
-            deck.add(new Card(i,Suit.Swords));
-            deck.add(new Card(i,Suit.Clubs));
-        }
-    }
+    public void buildDeck() {}
 
 
     public void shuffle() {

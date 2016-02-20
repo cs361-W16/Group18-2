@@ -1,6 +1,8 @@
-conf/Module.class
-conf/Routes.class
-controllers/ApplicationController.class
-models/Game.class
-models/Card.class
-models/Suit.class
+models\SpanishGame.class
+controllers\ApplicationController.class
+conf\Routes.class
+models\Suit.class
+models\Card.class
+conf\Module.class
+models\Game.class
+models\USgame.class
