@@ -23,9 +23,7 @@ public class Game {
     }
 
 
-    public void buildDeck() {
-
-    }
+    public void buildDeck() {}
 
 
     public void shuffle() {
