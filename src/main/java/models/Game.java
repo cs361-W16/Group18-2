@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * Created by michaelhilton on 1/25/16.
  */
-public class Game {
+public abstract class Game {
     public boolean error;
 
     public java.util.List<Card> deck = new ArrayList<>();
