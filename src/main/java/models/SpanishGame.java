@@ -6,7 +6,7 @@ package models;
 public class SpanishGame extends Game {
     public void buildDeck() {
         super.buildDeck();
-        for(int i = 1; i < 11; i++){
+        for(int i = 2; i < 15; i++){
             deck.add(new Card(i,Suit.Coins));
             deck.add(new Card(i,Suit.Cups));
             deck.add(new Card(i,Suit.Swords));
