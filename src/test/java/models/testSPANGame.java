@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
-* Created by Kitty on 2/20/2016.
+* Created by Charles Siebert on 2/20/2016.
 */
 public class testSPANGame {
 
