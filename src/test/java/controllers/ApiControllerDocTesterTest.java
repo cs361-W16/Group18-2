@@ -30,7 +30,7 @@ public class ApiControllerDocTesterTest extends NinjaDocTester {
     
     String URL_INDEX = "/";
     String URL_ACES_UP = "/AcesUp";
-    
+
     @Test
     public void testGetIndex() {
 

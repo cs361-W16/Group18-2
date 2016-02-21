@@ -17,6 +17,8 @@
 package controllers;
 
 import models.Game;
+import models.SpanishGame;
+import models.USgame;
 import ninja.Context;
 import ninja.Result;
 import ninja.Results;
@@ -37,7 +39,7 @@ public class ApplicationController {
     }
     
     public Result gameGet(){
-        Game g = new Game();
+        Game g = new USgame();
         g.buildDeck();
         g.shuffle();
         g.dealFour();
@@ -46,7 +48,7 @@ public class ApplicationController {
         return Results.json().render(g);
     }
     public Result sgameGet(){
-        Game g = new Game();
+        Game g = new SpanishGame();
         g.buildDeck();
         g.shuffle();
         g.dealFour();
@@ -55,7 +57,7 @@ public class ApplicationController {
         return Results.json().render(g);
     }
 
-    public Result dealPost(Context context, Game g) {
+    public Result dealPost(Context context, USgame g) {
         if(context.getRequestPath().contains("deal")){
             g.dealFour();
         }
@@ -63,12 +65,31 @@ public class ApplicationController {
         return Results.json().render(g);
     }
 
-    public Result removeCard(Context context, @PathParam("column") int colNumber, Game g){
+    public Result removeCard(Context context, @PathParam("column") int colNumber, USgame g){
         g.remove(colNumber);
         return  Results.json().render(g);
     }
 
-    public Result moveCard(Context context, @PathParam("columnFrom") int colFrom, @PathParam("columnTo") int colTo, Game g){
+    public Result moveCard(Context context, @PathParam("columnFrom") int colFrom, @PathParam("columnTo") int colTo, USgame g){
+        g.move(colFrom,colTo);
+        g.error=false;
+        return  Results.json().render(g);
+    }
+
+    public Result SPANdealPost(Context context, SpanishGame g) {
+        if(context.getRequestPath().contains("deal")){
+            g.dealFour();
+        }
+        g.error=false;
+        return Results.json().render(g);
+    }
+
+    public Result SPANremoveCard(Context context, @PathParam("column") int colNumber, SpanishGame g){
+        g.remove(colNumber);
+        return  Results.json().render(g);
+    }
+
+    public Result SPANmoveCard(Context context, @PathParam("columnFrom") int colFrom, @PathParam("columnTo") int colTo, SpanishGame g){
         g.move(colFrom,colTo);
         g.error=false;
         return  Results.json().render(g);
