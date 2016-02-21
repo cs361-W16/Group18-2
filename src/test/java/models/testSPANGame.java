@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
-* Created by Kitty on 2/20/2016.
+* Created by Charles Siebert on 2/20/2016.
 */
 public class testSPANGame {
 
@@ -21,7 +21,7 @@ public class testSPANGame {
     public void testSPANGameBuildDeck(){
         Game g = new SpanishGame();
         g.buildDeck();
-        assertEquals(52,g.deck.size());
+        assertEquals(40,g.deck.size());
     }
 
     @Test
@@ -49,10 +49,10 @@ public class testSPANGame {
         Game g = new SpanishGame();
         g.buildDeck();
         g.customDeal(0,3,6,9);
-        assertEquals("2Coins",g.cols.get(0).get(0).toString());
-        assertEquals("3Coins",g.cols.get(1).get(0).toString());
-        assertEquals("4Coins",g.cols.get(2).get(0).toString());
-        assertEquals("5Coins",g.cols.get(3).get(0).toString());
+        assertEquals("1Coins",g.cols.get(0).get(0).toString());
+        assertEquals("2Coins",g.cols.get(1).get(0).toString());
+        assertEquals("3Coins",g.cols.get(2).get(0).toString());
+        assertEquals("4Coins",g.cols.get(3).get(0).toString());
     }
 
     @Test
