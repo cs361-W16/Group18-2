@@ -16,7 +16,7 @@
 
 package controllers;
 
-import models.*;
+import models.Game;
 import ninja.Context;
 import ninja.Result;
 import ninja.Results;
@@ -36,8 +36,8 @@ public class ApplicationController {
         return Results.html().template("views/AcesUp/AcesUp.flt.html");
     }
     
-    public Result USgameGet(){
-        Game g = new USgame();
+    public Result gameGet(){
+        Game g = new Game();
         g.buildDeck();
         g.shuffle();
         g.dealFour();
@@ -45,8 +45,8 @@ public class ApplicationController {
 
         return Results.json().render(g);
     }
-    public Result SPANgameGet(){
-        Game g = new SpanishGame();
+    public Result sgameGet(){
+        Game g = new Game();
         g.buildDeck();
         g.shuffle();
         g.dealFour();
